@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>{{ page.title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+
+  <div class="container mx-auto px-4">
+
+    <div class="flex justify-center">
+      <div class="w-full lg:w-1/2 md:w-full">
+        <img class="w-full" title="https://sandpit.bmj.com/graphics/2016/sepsisSOTA/sepsisArt.png" alt="" src="https://sandpit.bmj.com/graphics/2016/sepsisSOTA/sepsisArt.png"></img>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div class="w-full lg:w-2/3 md:w-full">
+
+        {{ content }}
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
