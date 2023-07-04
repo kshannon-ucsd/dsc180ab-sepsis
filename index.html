@@ -6,9 +6,8 @@ title: Home
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <title>Data science capstone domain of inquiry</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-white">
 
@@ -25,27 +24,59 @@ title: Home
 
         <header>
           <h1 class="text-5xl font-bold pb-4">Sepsis - Using Clinical Healthcare Data Science to Identify and Combat an Infectious Killer</h1>
-          <p class="text-xl">Data science capstone domain (DSC 180AB {{ site.data.variables.section }})</p>
-  
+          <div class="flex items-center space-x-2">
+            <p class="text-xl">Data science capstone domain (DSC 180AB {{ site.data.variables.section }})</p>
+            <span class="px-6 py-0.5 rounded-md text-sm font-bold text-white bg-teal-500">{{ site.data.variables.section_day }} @ {{ site.data.variables.section_time }}</span>
+            <span class="px-6 py-0.5 rounded-md text-sm font-bold text-white bg-teal-500">{{ site.data.variables.section_location }}</span>
+          </div>
           <p class="text-xl">Fall & Winter {{ site.data.variables.year }} - <a href="https://www.kmshannon.com/" class="text-blue-600 hover:text-blue-900 hover:underline">Prof. Kyle Shannon</a></p>
         </header>
 
+        <hr class="my-8" />
+        <div id="toc">
+          <ul class="list-disc pl-5 space-y-1">
+            <li><a class="text-blue-500 hover:text-blue-700" href="#intro">Introduction to Topic</a></li>
+            <li><a class="text-blue-500 hover:text-blue-700" href="#data">Accessing the MIMIC Dataset</a></li>
+            <li><a class="text-blue-500 hover:text-blue-700" href="#schedule">Schedule</a></li>
+            <li><a class="text-blue-500 hover:text-blue-700" href="#replication">Phase I - Replication</a></li>
+            <li><a class="text-blue-500 hover:text-blue-700" href="#ethics">An Initial Note on Ethics</a></li>
+            <li><a class="text-blue-500 hover:text-blue-700" href="#participation">Section & Group Participation</a></li>
+            <li><a class="text-blue-500 hover:text-blue-700" href="#oh">Office Hours</a></li>
+          </ul>
+        </div>
 
         <hr class="my-8" />
-
-        <!-- Content goes here -->
+        <h2 id="intro" class="text-4xl text-gray-800 font-thin mb-3">Introduction to Topic</h2>
+        <div class="space-y-2 text-gray-900 leading-relaxed">
+          <p>Students will explore the world of inpatient ICU care by examining severe infection management and detection using the MIMIC dataset, a comprehensive, publicly available database of de-identified ICU patient data. This project will familiarize participants with healthcare data nuances and the critical role EHRs play in clinical decision-making. Through this experience, students will gain insights into the broader context of clinical decision-making and public health, learning to leverage EHRs and clinical data science for developing potential products, reports, and or health policies. They will better understand the US healthcare system, ICU operations, and the decision-making process for complex infectious cases like sepsis. By studying the work of multidisciplinary teams, students will gain a deeper understanding of intricate ICU cases and the patients' journeys through this challenging healthcare landscape. Additionally, they will appreciate the complexities of conducting data science in a demanding environment.</p>
+        </div>
 
         <hr class="my-8" />
+        <h2 id="data" class="text-4xl text-gray-800 font-thin mb-3">Accessing the MIMIC Dataset</h2>
+        <div class="space-y-2 text-gray-900 leading-relaxed">
+          <p>Accessing MIMIC data through PhysioNet is not the easiest process. It is best to start this a few weeks before classes begin because the process can take up to 4 weeks. It involves creating an account, filling out several forms, and completing a 2 hour long, free, training class online. Please follow the steps below. Follow them carefully.</p>
+        </div>
+        <div class="mt-2 ml-8">
+          <ul class="list-decimal">
+            <li>create account on <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/register/">PhysioNet</a>, use your UCSD email</li>
+            <li>Open these <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/about/citi-course/">instructions</a> for completing your CITI training course.</li>
+            <li>You will need to also create an account with <a class="text-blue-500 hover:text-blue-700" href="https://about.citiprogram.org/">CITI Program</a></li>
+            <li>Instructions from step 2 will tell you how to search for the correct class "CITI Data or Specimens Only Research", it is a pain to find and requires you to search through MIT's affiliate and answer some questions</li>
+            <li>After you complete the training (90% pass rate required, it is ok you can retake section quizzes) you will need to upload the "report" not the "certificate" to PhysioNet on your account under the <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/settings/training/">training</a> tab.</li>
+            <li>You will then need to apply for credentialing. Fill out the form, add me (Kyle Shannon, kshannon@ucsd.edu, Department: HDSI, role: Supervisor) to your application and then submit that sucker.</li>
+            <li>Nowe you wait, and I should get an email. All-in-all this process should take a few weeks to finalize</li>
+            <li>Once your account has been "credentialed" you can sign the "data agreement" form and request access to MIMIC-III and MIMIC-IV data set, further instructions below!</li>
+          </ul>
+        </div>
 
-        <h2 class="text-4xl">Schedule</h2>
-
+        <hr class="my-8" />
+        <h2 id="schedule" class="text-4xl text-gray-800 font-thin mb-3">Schedule</h2>
         <div class="overflow-x-auto">
-
           <table class="min-w-full divide-y divide-gray-200 border-2 border-gray-200 mt-6">
             <thead class="bg-gray-50">
               <tr>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Week</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Topic</th>
+                <th class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Week</th>
+                <th class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Topic</th>
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
@@ -53,7 +84,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">1</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="{{ site.baseurl }}/pages/intro" class="text-indigo-600 hover:text-indigo-900">
-                    Start with a thorough reading of the paper. Understand the problem statement, methods used, and the results obtained. Also, start reading about the MIMIC-III dataset and understand its structure and the kind of data it contains.
+                    Introduction to topic, domain, and reproducaility task.
                   </a>
                 </td>
               </tr>
@@ -61,7 +92,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">2</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Continue studying the MIMIC-III dataset. Apply for access to the MIMIC-III dataset, as this process can take some time. Start learning about the domain of sepsis and critical care.
+                    Dive into the MIMIC-III/IV dataset.
                   </a>
                 </td>
               </tr>
@@ -69,7 +100,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">3</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Once access to the MIMIC-III dataset is granted, start exploring the dataset. Understand the different tables and the relationships between them. Also, continue reading about sepsis and critical care.
+                    MIMIC data exploration and domain understanding
                   </a>
                 </td>
               </tr>
@@ -77,7 +108,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">4</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Begin data preprocessing. This includes cleaning the data, handling missing values, and extracting the relevant features needed for the study. Also, start reading about the methods used in the paper, such as k-means clustering and Latent Class Analysis (LCA).
+                    Begin data preprocessing and learn about Elixhauser comorbidity index
                   </a>
                 </td>
               </tr>
@@ -85,7 +116,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">5</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Continue with data preprocessing. Start learning about the Elixhauser comorbidity index and how it is used to categorize diseases. Also, continue reading about k-means clustering and LCA.
+                    Continue with data preprocessing. Read up on k-means clustering and LCA.
                   </a>
                 </td>
               </tr>
@@ -93,7 +124,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">6</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Start implementing the k-means clustering algorithm on the preprocessed data. Also, continue learning about LCA.
+                    Start implementing k-means and reading about network analysis
                   </a>
                 </td>
               </tr>
@@ -101,7 +132,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">7</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Continue with the implementation of k-means clustering. Start implementing the LCA on the data.
+                    Start implementing the LCA analysis
                   </a>
                 </td>
               </tr>
@@ -109,7 +140,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">8</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Complete the implementation of LCA. Start analyzing the results obtained from k-means clustering and LCA.
+                    Start analyzing the results and working on visualizations
                   </a>
                 </td>
               </tr>
@@ -117,7 +148,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">9</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Implement the network analysis on the data. Visualize the relationships between morbidities using the appropriate tools.
+                    Implement the network analysis on the data. Visualize the relationships
                   </a>
                 </td>
               </tr>
@@ -125,7 +156,7 @@ title: Home
                 <td class="px-6 py-2 whitespace-nowrap">10</td>
                 <td class="px-6 py-2 whitespace-nowrap">
                   <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Continue analyzing the results. Start learning about network analysis and how to visualize the relationships between morbidities.
+                    Project wrap up and debrief
                   </a>
                 </td>
               </tr>
@@ -134,21 +165,38 @@ title: Home
         </div>
 
         <hr class="my-8" />
+        <h2 id="replication" class="text-4xl text-gray-800 font-thin mb-3">Phase I - Replication</h2>
+        <div class="space-y-2 text-gray-900 leading-relaxed">
+          <p>The goal of reproducing the results from this paper is to validate the findings and methodologies used by the original authors. Reproduction is a critical step in the scientific process as it ensures the results are not due to chance or error, but are robust and reliable. In the context of this paper, reproducing the results would provide further evidence for the identified subgroups of critical care patients and their associated risks, which could have significant implications for patient care. It would also allow for a deeper understanding of the methods used, such as latent class analysis and k-means clustering, and their applicability in this context. Ultimately, the aim is to contribute to the body of knowledge in critical care and potentially guide future research and clinical practice.</p>
+        </div>
 
-        <h2 class="text-4xl">Office Hours</h2>
+        <hr class="my-8" />
+        <h2 id="ethics" class="text-4xl text-gray-800 font-thin mb-3">An Initial Note on Ethics</h2>
+        <div class="space-y-2 text-gray-900 leading-relaxed">
+          <p>The MIMIC dataset, a critical care database, embodies the intersection of medical research and ethical considerations. It provides a wealth of de-identified patient data, enabling researchers to study critical care conditions while respecting patient privacy. However, the use of this dataset still requires careful ethical considerations.</p>
+          <p>The principle of autonomy is upheld in the MIMIC dataset as it consists of de-identified patient data, ensuring patient consent and privacy. However, researchers must remain vigilant to avoid any potential re-identification of individuals, which could infringe on patient privacy. The principle of beneficence is reflected in the use of the MIMIC dataset for research aimed at improving critical care outcomes. However, researchers must ensure that their studies are designed to maximize potential benefits, such as enhancing understanding of critical care conditions or developing new treatment strategies.</p>
+          <p>Reproducibility is a key aspect of research using the MIMIC dataset. It promotes transparency and trust in the findings derived from the dataset. However, reproducing research must be balanced with maintaining data security. Researchers must ensure that they use secure methods to access and analyze the MIMIC dataset, protecting the data from unauthorized access or misuse. Remember, while the MIMIC dataset provides a valuable resource for critical care research, it also underscores the importance of ethical considerations in medical research. Researchers must navigate these ethical considerations carefully to ensure they respect patient rights and interests while advancing critical care research.</p>
+        </div>
 
+        <hr class="my-8" />
+        <h2 id="participation" class="text-4xl text-gray-800 font-thin mb-3">Section & Group Participation</h2>
+        <div class="space-y-2 text-gray-900 leading-relaxed">
+          <p>Participation in the weekly discussion section is mandatory. Each week, you are responsible for doing the reading/task assigned in the schedule. Come to section prepared to ask questions, please submit questions to Discord as well so i can take a look at them and think about how to best facilitate our limited time during section. Also be preparred to discuss together and with me about the results of these tasks.</p>
+          <p>Each week, turn in answers to the weekly questions to Canvas. These questions are meant to focus your work for the week and help prepare you for discussion. If you have questions about your work, please ask them in section, on discord, or in office hours (I will rarely comment on your submission).</p>
+          <p>You are responsible for the entire weekly reading/task, even if portions are not covered in the weekly questions. The weekly tasks are the building blocks for the project proposals/assignments due at the end of the quarter.</p>
+        </div>
+
+        <hr class="my-8" />
+        <h2 id="oh" class="text-4xl text-gray-800 font-thin mb-3">Office Hours</h2>
         <p>{{ site.data.variables.office_hours }}</p>
 
       </div>
     </div>
-
   </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- Tailwind doesn't include any JavaScript, so you'll need to implement this yourself if necessary -->
 </body>
-<footer class="pt-10 container mx-auto px-4">
-  Site design greatly inspired by Aaron Fraenkel, Shivam Lakhotia (https://afraenkel.github.io/capstone-malware-domain/)
+<footer class="container mx-auto px-4 py-6 text-center text-sm italic text-gray-600 mb-4">
+  <hr class="my-8" />
+  <p>Site design greatly inspired by <a class="text-blue-500 hover:text-blue-700" href="https://afraenkel.github.io/capstone-malware-domain/">Aaron Fraenkel</a>, Shivam Lakhotia</p>
+  <p>Built with love using Jekyll</p>
 </footer>
 </html>
