@@ -1,3 +1,6 @@
+---
+title: Home
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +25,9 @@
 
         <header>
           <h1 class="text-5xl font-bold pb-4">Sepsis - Using Clinical Healthcare Data Science to Identify and Combat an Infectious Killer</h1>
-          <p class="text-xl">Data science capstone domain (DSC 180AB A05)</p>
+          <p class="text-xl">Data science capstone domain (DSC 180AB {{ site.data.variables.section }})</p>
   
-          <p class="text-xl">Fall & Winter 2023 - <a href="https://www.kmshannon.com/" class="text-blue-600 hover:text-blue-900 hover:underline">Prof. Kyle Shannon</a></p>
+          <p class="text-xl">Fall & Winter {{ site.data.variables.year }} - <a href="https://www.kmshannon.com/" class="text-blue-600 hover:text-blue-900 hover:underline">Prof. Kyle Shannon</a></p>
         </header>
 
 
@@ -49,7 +52,7 @@
               <tr>
                 <td class="px-6 py-2 whitespace-nowrap">1</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/pages/intro" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/intro" class="text-indigo-600 hover:text-indigo-900">
                     Start with a thorough reading of the paper. Understand the problem statement, methods used, and the results obtained. Also, start reading about the MIMIC-III dataset and understand its structure and the kind of data it contains.
                   </a>
                 </td>
@@ -134,7 +137,7 @@
 
         <h2 class="text-4xl">Office Hours</h2>
 
-        <p>Fridays 9-11AM</p>
+        <p>{{ site.data.variables.office_hours }}</p>
 
       </div>
     </div>
