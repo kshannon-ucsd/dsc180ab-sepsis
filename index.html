@@ -22,23 +22,27 @@ title: Home
     <div class="flex justify-center">
       <div class="w-full lg:w-2/3 md:w-full">
 
-        <header>
+        <header class="space-y-1">
           <h1 class="text-5xl font-bold pb-4">Sepsis - Using Clinical Healthcare Data Science to Identify and Combat an Infectious Killer</h1>
           <div class="flex items-center space-x-2">
-            <p class="text-xl">Data science capstone domain (DSC 180AB {{ site.data.variables.section }})</p>
-            <span class="px-6 py-0.5 rounded-md text-sm font-bold text-white bg-teal-500">{{ site.data.variables.section_day }} @ {{ site.data.variables.section_time }}</span>
-            <span class="px-6 py-0.5 rounded-md text-sm font-bold text-white bg-teal-500">{{ site.data.variables.section_location }}</span>
+            <p class="text-xl">Data Science Capstone Domain - DSC 180AB</p>
           </div>
           <p class="text-xl">Fall & Winter {{ site.data.variables.year }} - <a href="https://www.kmshannon.com/" class="text-blue-600 hover:text-blue-900 hover:underline">Prof. Kyle Shannon</a></p>
+          <div class="flex items-center space-x-2">
+            <span class="px-6 py-0.5 rounded-md text-sm font-bold text-white bg-teal-500">{{ site.data.variables.section_day }} @ {{ site.data.variables.section_time }}</span>
+            <span class="px-6 py-0.5 rounded-md text-sm font-bold text-white bg-teal-500">{{ site.data.variables.section_location }}</span>
+            <span class="px-6 py-0.5 rounded-md text-sm font-bold text-white bg-teal-500">Section {{ site.data.variables.section }}</span>
+          </div>
         </header>
 
         <hr class="my-8" />
         <div id="toc">
           <ul class="list-disc pl-5 space-y-1">
             <li><a class="text-blue-500 hover:text-blue-700" href="#intro">Introduction to Topic</a></li>
-            <li><a class="text-blue-500 hover:text-blue-700" href="#data">Accessing the MIMIC Dataset</a></li>
-            <li><a class="text-blue-500 hover:text-blue-700" href="#schedule">Schedule</a></li>
-            <li><a class="text-blue-500 hover:text-blue-700" href="#replication">Phase I - Replication</a></li>
+            <li><a class="text-blue-500 hover:text-blue-700" href="#phase1">Phase I - Reproduction</a></li>
+            <li class="ml-6"><a class="text-blue-500 hover:text-blue-700" href="#data">Accessing the MIMIC Dataset</a></li>
+            <li class="ml-6"><a class="text-blue-500 hover:text-blue-700" href="#schedule">Schedule</a></li>
+            <li><a class="text-blue-500 hover:text-blue-700" href="#phase2">Phase II</a></li>
             <li><a class="text-blue-500 hover:text-blue-700" href="#ethics">An Initial Note on Ethics</a></li>
             <li><a class="text-blue-500 hover:text-blue-700" href="#participation">Section & Group Participation</a></li>
             <li><a class="text-blue-500 hover:text-blue-700" href="#oh">Office Hours</a></li>
@@ -52,27 +56,45 @@ title: Home
         </div>
 
         <hr class="my-8" />
-        <h2 id="data" class="text-4xl text-gray-800 font-thin mb-3">Accessing the MIMIC Dataset</h2>
+        <h2 id="phase1" class="text-4xl text-gray-800 font-thin mb-3">Phase I - Reproduction</h2>
         <div class="space-y-2 text-gray-900 leading-relaxed">
-          <p>Accessing MIMIC data through PhysioNet is not the easiest process. It is best to start this a few weeks before classes begin because the process can take up to 4 weeks. It involves creating an account, filling out several forms, and completing a 2 hour long, free, training class online. Please follow the steps below. Follow them carefully.</p>
-        </div>
-        <div class="mt-2 ml-8">
-          <ul class="list-decimal">
-            <li>create account on <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/register/">PhysioNet</a>, use your UCSD email</li>
-            <li>Open these <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/about/citi-course/">instructions</a> for completing your CITI training course.</li>
-            <li>You will need to also create an account with <a class="text-blue-500 hover:text-blue-700" href="https://about.citiprogram.org/">CITI Program</a></li>
-            <li>Instructions from step 2 will tell you how to search for the correct class "CITI Data or Specimens Only Research", it is a pain to find and requires you to search through MIT's affiliate and answer some questions</li>
-            <li>After you complete the training (90% pass rate required, it is ok you can retake section quizzes) you will need to upload the "report" not the "certificate" to PhysioNet on your account under the <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/settings/training/">training</a> tab.</li>
-            <li>You will then need to apply for credentialing. Fill out the form, add me (Kyle Shannon, kshannon@ucsd.edu, Department: HDSI, role: Supervisor) to your application and then submit that sucker.</li>
-            <li>Nowe you wait, and I should get an email. All-in-all this process should take a few weeks to finalize</li>
-            <li>Once your account has been "credentialed" you can sign the "data agreement" form and request access to MIMIC-III and MIMIC-IV data set, further instructions below!</li>
-          </ul>
+          <p>The aim of reproducing this paper's results is to affirm the original authors' findings and methodologies. This process is vital in science to ensure results are robust and reliable, not merely due to chance or error. Reproduction would reinforce the evidence for the identified critical care patient subgroups and their risks, potentially impacting patient care. It also provides a deeper understanding of the applied methods like latent class analysis and k-means clustering. Ultimately, this endeavor seeks to enrich critical care knowledge and potentially influence future research and clinical practice.</p>
         </div>
 
-        <hr class="my-8" />
-        <h2 id="schedule" class="text-4xl text-gray-800 font-thin mb-3">Schedule</h2>
-        <div class="overflow-x-auto">
-          <table class="min-w-full divide-y divide-gray-200 border-2 border-gray-200 mt-6">
+        <h3 id="data" class="text-3xl text-gray-700 font-light mb-1 mt-4">Accessing the MIMIC Dataset</h3>
+        <div class="space-y-2 text-gray-900 leading-relaxed">
+          <p>Gaining access to MIMIC data via PhysioNet can be a somewhat complex process. It's advisable to initiate this process a few weeks before your classes start, as it can take up to a month to complete verification. The process includes account creation, submitting online forms, and a two-hour online training course. Please adhere to the following steps meticulously for a smooth experience.</p>
+        </div>
+        <div class="mt-2 mx-8 pl-12 p-6 rounded-md bg-gray-100">
+          <ol class="list-decimal text-gray-900 text-sm leading-relaxed">
+            <li>Create an account on <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/register/">PhysioNet</a> using your UCSD email.</li>
+            <li>Follow these <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/about/citi-course/">instructions</a> to complete your CITI training course. You will need to create an account with <a class="text-blue-500 hover:text-blue-700" href="https://about.citiprogram.org/">CITI Program</a>.</li>
+            <li>Search for the "CITI Data or Specimens Only Research" course as per the instructions from step 2. This course is affiliated with MIT and requires answering some questions.</li>
+            <li>After achieving a pass rate of 90% or more in the training (you can retake section quizzes if needed), upload the "report" (not the "certificate") to PhysioNet on your account under the <a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/settings/training/">training</a> tab.</li>
+            <li>Apply for credentialing on PhysioNet. Fill out the form, add Kyle Shannon (kshannon@ucsd.edu, Department: HDSI, role: Supervisor) to your application, and submit it.</li>
+            <li>Wait for approval. This can take between 1 day to 3 weeks. You will receive two emails with the following subjects:
+              <ul class="list-disc ml-6">
+                <li>Your application for PhysioNet credentialing</li>
+                <li>Your application for PhysioNet training</li>
+                <li>If both emails confirm your authorization, proceed to the next step. If not, contact Kyle Shannon immediately.</li>
+              </ul>
+            </li>
+            <li>Return to PhysioNet and visit the specific dataset pages linked below. Sign the "Data Use Agreement" for the MIMIC-III and MIMIC-IV datasets:
+              <ul class="list-disc ml-6">
+                <li><a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/content/mimiciii/1.4/">MIMIC-III</a></li>
+                <li><a class="text-blue-500 hover:text-blue-700" href="https://physionet.org/content/mimiciv/2.2/">MIMIC-IV</a></li>
+              </ul>
+            </li>
+            <li>Both datasets will be available for download at the bottom of their respective pages.</li>
+          </ol>
+        </div>
+
+        <h3 id="schedule" class="text-3xl text-gray-700 font-light mb-1 mt-6">Schedule</h3>
+        <div class="space-y-2 text-gray-900 leading-relaxed">
+          <p>Click the "topic" links below for details regarding the readings, questions, and tasks for that week.</p>
+        </div>
+        <div class="overflow-x-auto mx-8">
+          <table class="min-w-full divide-y divide-gray-200 border-2 border-gray-200 mt-4">
             <thead class="bg-gray-50">
               <tr>
                 <th class="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Week</th>
@@ -81,25 +103,33 @@ title: Home
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
               <tr>
+                <td class="px-6 py-2 whitespace-nowrap">summer</td>
+                <td class="px-6 py-2 whitespace-nowrap">
+                  <a href="{{ site.baseurl }}/pages/summer" class="text-blue-500 hover:text-blue-700">
+                    Summer pre-game, i.e. get access to MIMIC data, domain reading
+                  </a>
+                </td>
+              </tr>
+              <tr>
                 <td class="px-6 py-2 whitespace-nowrap">1</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="{{ site.baseurl }}/pages/intro" class="text-indigo-600 hover:text-indigo-900">
-                    Introduction to topic, domain, and reproducaility task.
+                  <a href="{{ site.baseurl }}/pages/week_1" class="text-blue-500 hover:text-blue-700">
+                    Introduction to topic, domain, and reproducaility task
                   </a>
                 </td>
               </tr>
               <tr class="bg-gray-50">
                 <td class="px-6 py-2 whitespace-nowrap">2</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
-                    Dive into the MIMIC-III/IV dataset.
+                  <a href="{{ site.baseurl }}/pages/week_2" class="text-blue-500 hover:text-blue-700">
+                    Dive into the MIMIC-III/IV dataset
                   </a>
                 </td>
               </tr>
               <tr>
                 <td class="px-6 py-2 whitespace-nowrap">3</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/week_3" class="text-blue-500 hover:text-blue-700">
                     MIMIC data exploration and domain understanding
                   </a>
                 </td>
@@ -107,7 +137,7 @@ title: Home
               <tr class="bg-gray-50">
                 <td class="px-6 py-2 whitespace-nowrap">4</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/week_4" class="text-blue-500 hover:text-blue-700">
                     Begin data preprocessing and learn about Elixhauser comorbidity index
                   </a>
                 </td>
@@ -115,7 +145,7 @@ title: Home
               <tr>
                 <td class="px-6 py-2 whitespace-nowrap">5</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/week_5" class="text-blue-500 hover:text-blue-700">
                     Continue with data preprocessing. Read up on k-means clustering and LCA.
                   </a>
                 </td>
@@ -123,7 +153,7 @@ title: Home
               <tr class="bg-gray-50">
                 <td class="px-6 py-2 whitespace-nowrap">6</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/week_6" class="text-blue-500 hover:text-blue-700">
                     Start implementing k-means and reading about network analysis
                   </a>
                 </td>
@@ -131,7 +161,7 @@ title: Home
               <tr>
                 <td class="px-6 py-2 whitespace-nowrap">7</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/week_7" class="text-blue-500 hover:text-blue-700">
                     Start implementing the LCA analysis
                   </a>
                 </td>
@@ -139,7 +169,7 @@ title: Home
               <tr class="bg-gray-50">
                 <td class="px-6 py-2 whitespace-nowrap">8</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/week_8" class="text-blue-500 hover:text-blue-700">
                     Start analyzing the results and working on visualizations
                   </a>
                 </td>
@@ -147,7 +177,7 @@ title: Home
               <tr>
                 <td class="px-6 py-2 whitespace-nowrap">9</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/week_9" class="text-blue-500 hover:text-blue-700">
                     Implement the network analysis on the data. Visualize the relationships
                   </a>
                 </td>
@@ -155,7 +185,7 @@ title: Home
               <tr class="bg-gray-50">
                 <td class="px-6 py-2 whitespace-nowrap">10</td>
                 <td class="px-6 py-2 whitespace-nowrap">
-                  <a href="/posts/01-Introduction" class="text-indigo-600 hover:text-indigo-900">
+                  <a href="{{ site.baseurl }}/pages/week_10" class="text-blue-500 hover:text-blue-700">
                     Project wrap up and debrief
                   </a>
                 </td>
@@ -165,10 +195,12 @@ title: Home
         </div>
 
         <hr class="my-8" />
-        <h2 id="replication" class="text-4xl text-gray-800 font-thin mb-3">Phase I - Replication</h2>
+        <h2 id="phase2" class="text-4xl text-gray-800 font-thin mb-3">Phase II</h2>
         <div class="space-y-2 text-gray-900 leading-relaxed">
-          <p>The goal of reproducing the results from this paper is to validate the findings and methodologies used by the original authors. Reproduction is a critical step in the scientific process as it ensures the results are not due to chance or error, but are robust and reliable. In the context of this paper, reproducing the results would provide further evidence for the identified subgroups of critical care patients and their associated risks, which could have significant implications for patient care. It would also allow for a deeper understanding of the methods used, such as latent class analysis and k-means clustering, and their applicability in this context. Ultimately, the aim is to contribute to the body of knowledge in critical care and potentially guide future research and clinical practice.</p>
+          <p>TBD</p>
         </div>
+
+
 
         <hr class="my-8" />
         <h2 id="ethics" class="text-4xl text-gray-800 font-thin mb-3">An Initial Note on Ethics</h2>
@@ -181,9 +213,8 @@ title: Home
         <hr class="my-8" />
         <h2 id="participation" class="text-4xl text-gray-800 font-thin mb-3">Section & Group Participation</h2>
         <div class="space-y-2 text-gray-900 leading-relaxed">
-          <p>Participation in the weekly discussion section is mandatory. Each week, you are responsible for doing the reading/task assigned in the schedule. Come to section prepared to ask questions, please submit questions to Discord as well so i can take a look at them and think about how to best facilitate our limited time during section. Also be preparred to discuss together and with me about the results of these tasks.</p>
-          <p>Each week, turn in answers to the weekly questions to Canvas. These questions are meant to focus your work for the week and help prepare you for discussion. If you have questions about your work, please ask them in section, on discord, or in office hours (I will rarely comment on your submission).</p>
-          <p>You are responsible for the entire weekly reading/task, even if portions are not covered in the weekly questions. The weekly tasks are the building blocks for the project proposals/assignments due at the end of the quarter.</p>
+          <p>Participation in the weekly discussion section is mandatory. Each week, during phase 1, you are responsible for doing the reading/task assigned in the schedule and submitting answers to the listed questions before discussion section begins. </p>
+          <p>Weekly assigned questions help me to observe how you are all doing on the project, as well as to focus your work for the week and help prepare you for discussion. If you have questions about your work, please ask them in section, on discord, or in office hours (I will rarely comment on your submission answers).</p>
         </div>
 
         <hr class="my-8" />
