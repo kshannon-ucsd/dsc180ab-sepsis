@@ -1,61 +1,40 @@
 ---
 layout: default
-title: Summer pre-game, i.e. get access to MIMIC data, domain reading
+title: Introduction to topic, domain, and paper
 ---
 
-
-
-<p>This is summer and we should keep things lite, but it is really important that everyione tries to gain access to the data so we can hit the ground running in the fall. I also want to make sure there is some baseline knowledge about the domain and data, so please try to take care of the tasks labeled <i>critical</i>.</p>
+<p>Welcome, Welcome, Welcome!</p>
+<p>Week 1 is upon us and we are going to spend it getting everyone situated, goiong over the primary paper, and beginning to read up on the domain of sepsis care in a critical care unit. As well as using EHR data for clinical care research.</p>
 
 <h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Topics</h2>
-<p>You will be touching on these topics over the summer</p>
+<p>You will be touching on these topics over the first week</p>
 <ul class="list-disc pl-5 ml-4 space-y-1">
-  <li>What is sepsis, how it can be diagnosed/treated and why it is very deadly</li>
-  <li>The MIMIC dataset and where it comes from</li>
+  <li>What is sepsis, how it can be diagnosed/treated and why it is very deadly from an epidemiological point of view</li>
+  <li>Severity of illness scores</li>
+  <li>EHR data</li>
+  <li>Reproducibility/replicability in data science</li>
 </ul>
 
 <h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Tasks</h2>
 <ul class="list-disc pl-5 ml-4 space-y-1">
   <li>Gain access to the MIMIC-III and MIMIC-IV dataset, see instructions on home page<span class="ml-3 bg-red-500 text-white text-sm font-bold py-0.5 px-3 rounded-md">critical</span></li>
-  <li>Complete both assigned readings</li>
-  <li>If you feel up to it, read the domain readings on sepsis and ICU care in the "Additional Resources" section on the week 1 page</li>
-  <li>If you feel up to it you can also read the capstone primary paper by <i>Zador et al.</i> linked on the home page</li>
+  <li>Complete all assigned readings</li>
+  <li>Begin to familairize yourself with the domain by thumbing through the <a href="{{ site.baseurl }}/pages/domain" class="text-blue-500 hover:text-blue-700">Domain Expertise</a> page.</li>
+  <li>Submit question answers to the online form (linked below)</li>
+  <li>Join the class Discord Channel: {{ site.data.variables.discord_link }}</li>
 </ul>
 
 <h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Readings</h2>
   <ul class="list-disc pl-5 ml-4 space-y-1">
-    <li>MIMIC-III paper by Johnson et al. <a href="https://www.nature.com/articles/sdata201635" class="text-blue-500 hover:text-blue-700">link</a></li>
-    <li>MIMIC-III web description <a href="https://physionet.org/content/mimiciii/1.4/" class="text-blue-500 hover:text-blue-700">link</a></li>
+    <li>Read the capstone primary paper by <i>Zador et al.</i> linked on the home page<span class="ml-3 bg-red-500 text-white text-sm font-bold py-0.5 px-3 rounded-md">critical</span></li>
+    <li>MIMIC-III paper by Johnson et al. <a href="https://www.nature.com/articles/sdata201635" class="text-blue-500 hover:text-blue-700">link</a> <i> - if you already did not finish it</i></li>
+    <li>MIMIC-III web description <a href="https://physionet.org/content/mimiciii/1.4/" class="text-blue-500 hover:text-blue-700">link</a> <i> - if you already did not finish it</i></li>
   </ul>
-
-<h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Additional Resources</h2>
-  <ul class="list-disc pl-5 ml-4 space-y-1">
-    <li>Gain access to the MIMIC-III and MIMIC-IV dataset</li>
-    <li>Familaiirze yourself with some of the domain readings</li>
-    <li>Familaiirze yourself with MIMIC-III</li>
-    <li>If you feel up to it you can read the primary paper</li>
-  </ul>
-
-Weekly Questions
-Answer the following questions on Canvas:
-
-How is learning computer code different than typical approachs to NLP (e.g. n-gram models)? What would an NLP model fail to learn? Give an example.
-What are the different ways Malware might attack a mobile device through an application?
-What are the primary ways of analyzing source code for evidence of Malware?
 
 <h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Questions</h2>
-Answer the following questions using this <a class="text-blue-500 hover:text-blue-700" href="{{ site.data.variables.questions_link }}">google form link</a>
-1. TODO
-2. TODO
-3. TODO
-
-
-The Oxford Acute Severity of Illness Score (OASIS), Simplified Acute Physiology Score (SAPS II), and Sequential Organ Failure Assessment (SOFA) score are all used to assess the severity of illness in patients, particularly those in intensive care units (ICU). They are often used to predict mortality rates and to guide treatment decisions. Here's a brief comparison:
-
-Oxford Acute Severity of Illness Score (OASIS): This score is calculated using 10 variables, including age, vital signs, and Glasgow Coma Scale. It is used to predict the mortality of ICU patients. Studies have shown that there are no significant differences between OASIS, APACHE II, and SAPS II in predicting clinical outcomes in patients with acute kidney injury (source).
-
-Simplified Acute Physiology Score (SAPS II): This score is calculated using 17 variables, including age, type of admission, and three physiological variables. It is used to predict the probability of mortality in ICU patients. The SAPS II has been compared to other scoring systems like APACHE II and SOFA, and it has been found to be effective in assessing mortality in surgical patients with sepsis (source).
-
-Sequential Organ Failure Assessment (SOFA) score: This score is calculated based on six different scores, one each for the respiratory, cardiovascular, hepatic, coagulation, renal, and neurological systems. It is used to track a patient's status during the stay in an ICU. The SOFA score has been found to be effective in assessing the condition and predicting the mortality of ICU patients (source).
-
-It's important to note that while these scores are helpful in predicting outcomes and guiding treatment decisions, they are not definitive. The patient's individual condition and response to treatment also play a significant role.
+<p>Answer the following questions using this <a class="text-blue-500 hover:text-blue-700" href="{{ site.data.variables.questions_link }}">google form link</a></p>
+<ol class="list-decimal pl-5 ml-4 space-y-1">
+  <li>What are the primary goals of the research paper we aim to replicate? Additionally, what do you anticipate to be the major hurdles in this process? Lastly, define what outcomes would you consider as a successful completion of Phase I in this capstone project.</li>
+  <li>Provide a detailed explanation of what an Electronic Health Record (EHR) is. How does EHR relate to and integrate with the MIMIC datasets?</li>
+  <li>Explain the concept and utility of Illness Scores in healthcare. Why do multiple illness scores exist? Select one illness score from the following - OASIS, SAPS II, or SOFA. Write a brief overview, including its applications and key attributes. Note: The aim is for each team member to gain expertise in at least one illness score, so ensure that all three scores are explored by different members.</li>
+</ol>
