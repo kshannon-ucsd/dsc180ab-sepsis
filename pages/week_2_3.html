@@ -1,40 +1,40 @@
 ---
 layout: default
-title: Introduction to topic, domain, and paper
+title: Dive into the MIMIC-III dataset + EDA
 ---
 
 <p>Welcome, Welcome, Welcome!</p>
-<p>Week 1 is upon us and we are going to spend it getting everyone situated, goiong over the primary paper, and beginning to read up on the domain of sepsis care in a critical care unit. As well as using EHR data for clinical care research.</p>
+<p>These next two weeks will be focused on setting up the MIMIC-III dataset to run locally, and exploring the data. Get comfortable with the different tables and perform some light EDA.</p>
 
 <h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Topics</h2>
 <p>You will be touching on these topics over the first week</p>
 <ul class="list-disc pl-5 ml-4 space-y-1">
-  <li>What is sepsis, how it can be diagnosed/treated and why it is very deadly from an epidemiological point of view</li>
-  <li>Severity of illness scores</li>
-  <li>EHR data</li>
-  <li>Reproducibility/replicability in data science</li>
+  <li>Learning about EHR data</li>
+  <li>How EHR data is processed into a DB</li>
 </ul>
 
 <h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Tasks</h2>
 <ul class="list-disc pl-5 ml-4 space-y-1">
-  <li>Gain access to the MIMIC-III and MIMIC-IV dataset, see instructions on home page<span class="ml-3 bg-red-500 text-white text-sm font-bold py-0.5 px-3 rounded-md">critical</span></li>
+  <li>Each team member should focus on performing their own EDA</li>
   <li>Complete all assigned readings</li>
-  <li>Begin to familairize yourself with the domain by thumbing through the <a href="{{ site.baseurl }}/pages/domain" class="text-blue-500 hover:text-blue-700">Domain Expertise</a> page.</li>
+  <li>Continue to familairize yourself with the domain by thumbing through the <a href="{{ site.baseurl }}/pages/domain" class="text-blue-500 hover:text-blue-700">Domain Expertise</a> page <span class="ml-3 bg-red-500 text-white text-sm font-bold py-0.5 px-3 rounded-md">critical</span></li>
   <li>Submit question answers to the online form (linked below)</li>
-  <li>Join the class Discord Channel: {{ site.data.variables.discord_link }}</li>
+  <li>Try to calculate some illness scores (e.g. SOFA) for some patients, see how this process might work</li>
 </ul>
 
-<h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Readings</h2>
+<h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Readings & Videos</h2>
   <ul class="list-disc pl-5 ml-4 space-y-1">
-    <li>Read the capstone primary paper by <i>Zador et al.</i> linked on the home page<span class="ml-3 bg-red-500 text-white text-sm font-bold py-0.5 px-3 rounded-md">critical</span></li>
-    <li>MIMIC-III paper by Johnson et al. <a href="https://www.nature.com/articles/sdata201635" class="text-blue-500 hover:text-blue-700">link</a> <i> - if you already did not finish it</i></li>
-    <li>MIMIC-III web description <a href="https://physionet.org/content/mimiciii/1.4/" class="text-blue-500 hover:text-blue-700">link</a> <i> - if you already did not finish it</i></li>
+    <li>Again, read the capstone primary paper by <i>Zador et al.</i> linked on the home page. Take good notes, and begin to explore some of the key papers in the references.</li>
+    <li>Watch this video presentation on the MIMIC-III database <a href="https://www.youtube.com/watch?v=Xbz6jFcyryQ" class="text-blue-500 hover:text-blue-700">link</a></li>
+    <li>Watch this lecture on deep diving into clinical data with MIMIC. <a href="https://www.youtube.com/watch?v=0UFwGJe6ubg" class="text-blue-500 hover:text-blue-700">link</a> You can also try to reproduce some of the EDA and analysis in this video by using the MIMIC dataset</li>
   </ul>
 
 <h2 class="text-4xl text-gray-800 font-thin mb-3 mt-8">Questions</h2>
 <p>Answer the following questions using this <a class="text-blue-500 hover:text-blue-700" href="{{ site.data.variables.questions_link }}">google form link</a></p>
 <ol class="list-decimal pl-5 ml-4 space-y-1">
-  <li>What are the primary goals of the research paper we aim to replicate? Additionally, what do you anticipate to be the major hurdles in this process? Lastly, define what outcomes would you consider as a successful completion of Phase I in this capstone project.</li>
-  <li>Provide a detailed explanation of what an Electronic Health Record (EHR) is. How does EHR relate to and integrate with the MIMIC datasets?</li>
-  <li>Explain the concept and utility of Illness Scores in healthcare. Why do multiple illness scores exist? Select one illness score from the following - OASIS, SAPS II, or SOFA. Write a brief overview, including its applications and key attributes. Note: The aim is for each team member to gain expertise in at least one illness score, so ensure that all three scores are explored by different members.</li>
-</ol>
+    <li>From the MIT OpenCourseWare lecture, what key insights and knowledge did you gain regarding clinical data?</li>
+    <li>Describe any challenges you encountered while setting up the MIMIC-III dataset on your local machine. How did you address and resolve these challenges?</li>
+    <li>Please provide an overview of the steps and methodologies involved in transforming raw EHR data into the structured format of the MIMIC dataset. Note that you may need to conduct additional research through online sources for comprehensive information.</li>
+    <li>Were you successful in calculating illness scores for any of the patients in the dataset? Elaborate on the process you followed and discuss any challenges faced along the way.</li>
+  </ol>
+  
