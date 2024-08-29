@@ -1,5 +1,4 @@
-# ucsd-dsc180
-[Website](https://kshannon.github.io/ucsd-dsc180/) for the DSC 180 domain capstone group I am leading!
+# ucsd-dsc180ab-sepsis
 
 DSC Capstone Course Link: https://dsc-capstone.org/enrollment/
 
